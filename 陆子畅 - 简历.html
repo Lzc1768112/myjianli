@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<!-- saved from url=(0086)file:///C:/Users/1/Downloads/%E9%99%86%E5%AD%90%E7%95%85%20-%20%E7%AE%80%E5%8E%86.html -->
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陆子畅 - 简历</title>
     <style>
         :root {
             /* === 精准复刻图片的经典商务蓝配色 === */
-            --primary: #2B5CA0;       /* 皇家蓝：用于姓名、标题、图标背景（最核心的颜色） */
-            --primary-light: #FFFFFF; /* 纯白底色：图片中的项目其实没有灰底，是纯白的 */
+            --primary: #2B5CA0;       /* 皇家蓝：用于姓名、标题、图标背景 */
+            --primary-light: #FFFFFF; /* 纯白底色：项目卡片无灰底 */
             --primary-border: #DDE4ED;/* 极浅蓝灰：用于各处的细分割线 */
             
-            --text-main: #222222;     /* 纯正深黑：用于正文和次级标题，对比度高 */
+            --text-main: #222222;     /* 纯正深黑：用于正文和次级标题 */
             --text-dark: #444444;     /* 略浅的深灰：用于普通正文描述 */
-            --text-gray: #666666;     /* 中性灰：用于日期、竖线分隔符等辅助信息 */
+            --text-gray: #666666;     /* 中性灰：用于辅助信息 */
             
-            --red-text: #D32F2F;      /* 醒目红：精准对应图片中“国家级一等奖”的红色字 */
+            --red-text: #D32F2F;      /* 醒目红：精准对应图片中的红色字 */
             --bg-white: #FFFFFF;      /* 简历整体纯白背景 */
         }
 
@@ -37,13 +37,12 @@
             margin: 0;
         }
 
-        /* 严格的 A4 打印尺寸，并加上图片中的全包围边框 */
+        /* 严格的 A4 打印尺寸与图片中的全包围边框 */
         .resume-container {
             width: 210mm;
             min-height: 297mm;
             background: var(--bg-white);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            /* 增加边框，复刻图片效果 */
             border: 2px solid var(--primary); 
             padding: 12mm 15mm;
             position: relative;
@@ -51,7 +50,6 @@
             flex-direction: column;
         }
 
-        /* 打印模式专属样式 */
         @media print {
             body { background: transparent; padding: 0; }
             .resume-container { 
@@ -59,15 +57,10 @@
                 width: 210mm; 
                 height: 297mm; 
                 margin: 0; 
-                /* 打印时去掉容器内边距，完全交给 @page 控制 */
                 padding: 0; 
-                border: none; /* 打印时可以通过伪元素或继续保留border，这里保留边距 */
+                border: none; 
             }
-            @page { 
-                size: A4; 
-                margin: 12mm 15mm; /* 物理边距 */
-            }
-            /* 打印时加上边框 */
+            @page { size: A4; margin: 12mm 15mm; }
             .resume-container::before {
                 content: "";
                 position: absolute;
@@ -97,7 +90,7 @@
 
         .name-box h1 {
             font-size: 38px;
-            color: var(--primary); /* 图片中名字是主色调 */
+            color: var(--primary); 
             letter-spacing: 2px;
             font-weight: 900;
         }
@@ -139,7 +132,7 @@
         }
 
         .wechat-icon svg {
-            fill: #10B981; /* 微信绿 */
+            fill: #10B981;
         }
 
         .divider-v {
@@ -148,18 +141,17 @@
             background-color: var(--primary-border);
         }
 
+        /* 头像框样式（包含圆角） */
         .avatar-box {
             width: 95px;
             height: 125px;
             background-color: var(--primary-light);
-            overflow: hidden;  /* 必须要有这个属性，照片才会被切成圆角 */
+            overflow: hidden;  
             border: 1px solid var(--primary-border);
             display: flex;
             align-items: center;
             justify-content: center;
-
-            /* 👇 在这里添加一行圆角设置 👇 */
-            border-radius: 8px;  
+            border-radius: 8px;  /* 8px圆角 */
         }
         
         .avatar-box img {
@@ -174,7 +166,7 @@
             margin: 12px 0;
         }
 
-        /* ----- Section Titles (复刻图片带线标题) ----- */
+        /* ----- Section Titles ----- */
         .section-title {
             display: flex;
             align-items: center;
@@ -202,15 +194,16 @@
             fill: white;
         }
 
+        /* 标题后面的线条加粗到了2px */
         .section-title::after {
             content: "";
             flex: 1;
-            height: 1px;
+            height: 2px;
             background-color: var(--primary-border);
             margin-left: 10px;
         }
 
-        /* ----- Advantages (复刻图片的方形Icon风格) ----- */
+        /* ----- Advantages ----- */
         .advantages-grid {
             display: flex;
             justify-content: space-between;
@@ -424,7 +417,7 @@
 
         /* ----- Projects ----- */
         .project-card {
-            background-color: var(--primary-light); /* 图片中的浅色背景 */
+            background-color: var(--primary-light); 
             border: 1px solid var(--primary-border);
             padding: 14px 16px;
             margin-bottom: 16px;
@@ -508,7 +501,6 @@
             text-align: justify;
         }
         
-
         .bold-black { font-weight: bold; color: var(--text-main); }
     </style>
 </head>
@@ -552,18 +544,18 @@
                 <div class="divider-v"></div>
                 <div class="contact-item">
                     <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
-                    意向地：上海 / 南京
+                    意向地：合肥 / 南京
                 </div>
             </div>
         </div>
         
         <div class="avatar-box">
-    <img src="./陆子畅 - 简历_files/图片优化（白底+西装）.png" alt="证件照" style="object-position: center 1px;">
+            <img src="photo.png" alt="证件照" style="object-position: center 1px;">
         </div>
         
     </div>
 
-    
+    <hr class="divider-h">
 
     <div class="section-title">
         <div class="title-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg></div>
@@ -577,7 +569,7 @@
             </div>
             <div class="adv-content">
                 <h3>国家级竞赛双重背书</h3>
-                <p>荣获睿抗机器人开发者大赛国家一等奖（获奖率前3%）及蓝桥杯国家级奖项，算法功底极其扎实。</p>
+                <p>荣获睿抗机器人开发者大赛国家一等奖（获奖率前3%）及蓝桥杯省级奖项，算法功底极其扎实。</p>
             </div>
         </div>
         <div class="adv-divider"></div>
@@ -602,7 +594,7 @@
         </div>
     </div>
 
-    
+    <hr class="divider-h">
 
     <div class="main-layout">
         
@@ -720,7 +712,7 @@
                 <div class="proj-sub">
                     <div>
                         <span class="bold-black">角色：</span>视觉识别负责人
-<span class="bold-black">技术栈：</span><span class="highlight">YOLOv8 + PyTorch + STM32</span>
+                        <span class="bold-black">技术栈：</span><span class="highlight">YOLOv8 + PyTorch + STM32</span>
                     </div>
                     <div class="award">国家级一等奖</div>
                 </div>
@@ -736,7 +728,7 @@
 
     </div>
 
-    
+    <hr class="divider-h">
 
     <div class="section-title">
         <div class="title-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg></div>
@@ -748,5 +740,5 @@
 
 </div>
 
-
-</body></html>
+</body>
+</html>
